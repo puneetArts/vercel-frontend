@@ -204,7 +204,8 @@ const Signup = () => {
     //     setMsg('Failed to load colleges');
     //     setMsgType('error');
     //   });
-    axios.get(`${process.env.REACT_APP_API_URL}/api/colleges`)
+    axios.get(`${import.meta.env.VITE_API_URL}/api/colleges`)
+
     .then(res => {
       if (Array.isArray(res.data)) {
         setColleges(res.data);
