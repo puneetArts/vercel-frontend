@@ -184,26 +184,40 @@ const Signup = () => {
   const [msgType, setMsgType] = useState('');
 
   useEffect(() => {
-    axios
-      .get(`${process.env.REACT_APP_API_URL}/api/colleges`)
-      .then(res => {
-        console.log("Colleges API response:", res.data); // Debug log
-        // Ensure data is an array before setting state
-        if (Array.isArray(res.data)) {
-          setColleges(res.data);
-        } else if (Array.isArray(res.data.colleges)) {
-          // If API wraps colleges in an object { colleges: [...] }
-          setColleges(res.data.colleges);
-        } else {
-          setColleges([]);
-          console.warn("Colleges API did not return an array.");
-        }
-      })
-      .catch(err => {
-        console.error("Error fetching colleges:", err);
-        setMsg('Failed to load colleges');
-        setMsgType('error');
-      });
+    // axios
+    //   .get(`${process.env.REACT_APP_API_URL}/api/colleges`)
+    //   .then(res => {
+    //     console.log("Colleges API response:", res.data); // Debug log
+    //     // Ensure data is an array before setting state
+    //     if (Array.isArray(res.data)) {
+    //       setColleges(res.data);
+    //     } else if (Array.isArray(res.data.colleges)) {
+    //       // If API wraps colleges in an object { colleges: [...] }
+    //       setColleges(res.data.colleges);
+    //     } else {
+    //       setColleges([]);
+    //       console.warn("Colleges API did not return an array.");
+    //     }
+    //   })
+    //   .catch(err => {
+    //     console.error("Error fetching colleges:", err);
+    //     setMsg('Failed to load colleges');
+    //     setMsgType('error');
+    //   });
+    axios.get(`${process.env.REACT_APP_API_URL}/api/colleges`)
+  .then(res => {
+    if (Array.isArray(res.data)) {
+      setColleges(res.data);
+    } else {
+      setColleges([]);
+      console.warn("Colleges API did not return an array.");
+    }
+  })
+  .catch(error => {
+    console.error("Failed to fetch colleges:", error);
+    setColleges([]);
+  });
+
   }, []);
 
   const handleChange = (e) =>
