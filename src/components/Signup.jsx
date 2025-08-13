@@ -205,18 +205,21 @@ const Signup = () => {
     //     setMsgType('error');
     //   });
     axios.get(`${process.env.REACT_APP_API_URL}/api/colleges`)
-  .then(res => {
-    if (Array.isArray(res.data)) {
-      setColleges(res.data);
-    } else {
+    .then(res => {
+      console.log("Colleges API response:", res.data);
+      if (Array.isArray(res.data)) {
+        setColleges(res.data);
+      } else if (Array.isArray(res.data.colleges)) {
+        setColleges(res.data.colleges);
+      } else {
+        setColleges([]);
+        console.warn("Colleges API did not return an array. Got:", res.data);
+      }
+    })
+    .catch(err => {
+      console.error("Error fetching colleges:", err);
       setColleges([]);
-      console.warn("Colleges API did not return an array.");
-    }
-  })
-  .catch(error => {
-    console.error("Failed to fetch colleges:", error);
-    setColleges([]);
-  });
+    });
 
   }, []);
 
