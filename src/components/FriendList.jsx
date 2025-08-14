@@ -106,7 +106,7 @@ const FriendList = () => {
       setLoading(true);
       setMsg('');
       try {
-        const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/users/friends`, {
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/users/friends`, {
           headers: { Authorization: `Bearer ${user.token}` }
         });
         setFriends(res.data);

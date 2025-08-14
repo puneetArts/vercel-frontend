@@ -362,7 +362,7 @@ const ProfileEdit = () => {
   useEffect(() => {
     if (!user) return;
 
-    axios.get(`${process.env.REACT_APP_API_URL}/api/users/me`, {
+    axios.get(`${import.meta.env.VITE_API_URL}/api/users/me`, {
       headers: { Authorization: `Bearer ${user.token}` }
     })
       .then(res => {
@@ -414,7 +414,7 @@ const ProfileEdit = () => {
         formData.append('profilePic', profilePicFile);
       }
 
-      const res = await axios.put(`${process.env.REACT_APP_API_URL}/api/users/me`, formData, {
+      const res = await axios.put(`${import.meta.env.VITE_API_URL}/api/users/me`, formData, {
         headers: {
           Authorization: `Bearer ${user.token}`,
           'Content-Type': 'multipart/form-data'

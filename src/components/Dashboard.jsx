@@ -315,7 +315,7 @@ const Dashboard = () => {
       setLoading(true);
       setMsg('');
       try {
-        const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/users/college`, {
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/users/college`, {
           headers: { Authorization: `Bearer ${user.token}` }
         });
         setUsers(res.data.filter(u => u._id !== user._id));
@@ -335,7 +335,7 @@ const Dashboard = () => {
 
     const fetchUserRelationships = async () => {
       try {
-        const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/users/me`, {
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/users/me`, {
           headers: { Authorization: `Bearer ${user.token}` }
         });
         setFriendRequestsSent(res.data.friendRequestsSent || []);
@@ -354,7 +354,7 @@ const Dashboard = () => {
 
     const fetchReceivedRequestsCount = async () => {
       try {
-        const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/users/friend-requests`, {
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/users/friend-requests`, {
           headers: { Authorization: `Bearer ${user.token}` }
         });
         setReceivedRequestsCount(res.data.length);
@@ -373,10 +373,10 @@ const Dashboard = () => {
     const fetchCollegeFeed = async () => {
       try {
         const [postsRes, achieRes] = await Promise.all([
-          axios.get(`${process.env.REACT_APP_API_URL}/api/posts/college`, {
+          axios.get(`${import.meta.env.VITE_API_URL}/api/posts/college`, {
             headers: { Authorization: `Bearer ${user.token}` }
           }),
-          axios.get(`${process.env.REACT_APP_API_URL}/api/achievements/college`, {
+          axios.get(`${import.meta.env.VITE_API_URL}/api/achievements/college`, {
             headers: { Authorization: `Bearer ${user.token}` }
           })
         ]);
@@ -395,7 +395,7 @@ const Dashboard = () => {
     setMsg('');
     try {
       await axios.post(
-        `${process.env.REACT_APP_API_URL}/api/users/friend-request/send`,
+        `${import.meta.env.VITE_API_URL}/api/users/friend-request/send`,
         { receiverId },
         { headers: { Authorization: `Bearer ${user.token}` } }
       );

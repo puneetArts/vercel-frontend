@@ -80,7 +80,7 @@ export const AuthProvider = ({ children }) => {
       setUser({ ...JSON.parse(storedUser), token: storedToken });
 
       axios
-        .get(`${process.env.REACT_APP_API_URL}/api/users/me`, {
+        .get(`${import.meta.env.VITE_API_URL}/api/users/me`, {
           headers: { Authorization: `Bearer ${storedToken}` }
         })
         .then((res) => {
@@ -103,7 +103,7 @@ export const AuthProvider = ({ children }) => {
   const login = async (token) => {
     try {
       localStorage.setItem("token", token);
-      const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/users/me`, {
+      const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/users/me`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       const userData = { ...res.data, token };

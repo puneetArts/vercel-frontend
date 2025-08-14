@@ -232,7 +232,7 @@ const Signup = () => {
     setMsgType('');
 
     try {
-      await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/signup`, form);
+      await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/signup`, form);
       setMsg("Signup successful! You can now log in.");
       setMsgType('success');
       setForm({ name: '', email: '', password: '', collegeId: '' });

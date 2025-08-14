@@ -74,7 +74,7 @@ const FriendRequests = () => {
   useEffect(() => {
     if (!user) return;
     
-    axios.get(`${process.env.REACT_APP_API_URL}/api/users/friend-requests`, {
+    axios.get(`${import.meta.env.VITE_API_URL}/api/users/friend-requests`, {
       headers: { Authorization: `Bearer ${user.token}` }
     })
     .then(res => setRequests(res.data))
@@ -85,7 +85,7 @@ const FriendRequests = () => {
     setMsg('');
     try {
       await axios.post(
-        `${process.env.REACT_APP_API_URL}/api/users/friend-request/${action}`,
+        `${import.meta.env.VITE_API_URL}/api/users/friend-request/${action}`,
         { senderId },
         { headers: { Authorization: `Bearer ${user.token}` } }
       );

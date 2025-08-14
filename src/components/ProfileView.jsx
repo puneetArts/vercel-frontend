@@ -139,21 +139,21 @@ const ProfileView = () => {
     if (!user) return;
 
     // Fetch profile info
-    axios.get(`${process.env.REACT_APP_API_URL}/api/users/${id}`, {
+    axios.get(`${import.meta.env.VITE_API_URL}/api/users/${id}`, {
       headers: { Authorization: `Bearer ${user.token}` }
     })
       .then(res => setProfile(res.data))
       .catch(() => setMsg('Failed to load profile'));
 
     // Fetch achievements for this user
-    axios.get(`${process.env.REACT_APP_API_URL}/api/achievements/user/${id}`, {
+    axios.get(`${import.meta.env.VITE_API_URL}/api/achievements/user/${id}`, {
       headers: { Authorization: `Bearer ${user.token}` }
     })
       .then(res => setAchievements(res.data))
       .catch(err => console.error('Achievements fetch error:', err));
 
     // Fetch posts for this user
-    axios.get(`${process.env.REACT_APP_API_URL}/api/posts/user/${id}`, {
+    axios.get(`${import.meta.env.VITE_API_URL}/api/posts/user/${id}`, {
       headers: { Authorization: `Bearer ${user.token}` }
     })
       .then(res => setPosts(res.data))
