@@ -23,7 +23,7 @@ const ResumeList = () => {
 
   return (
     <div>
-      <h4>Resume</h4>
+      
       {resumes.length === 0 ? (
         <p>No resume uploaded yet.</p>
       ) : (

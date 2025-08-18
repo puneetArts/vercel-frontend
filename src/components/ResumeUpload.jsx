@@ -42,8 +42,8 @@ const ResumeUpload = ({ onUploaded }) => {
 
   return (
     <div className='resume-box'>
-      <form onSubmit={handleSubmit} style={{ marginBottom: '1rem' }}>
-      <h4>Upload Resume</h4>
+      <form onSubmit={handleSubmit} style={{color:"white", marginBottom: '1rem' }}>
+      <h4 className='h4'>Upload Resume</h4>
       {msg && <p>{msg}</p>}
 
       <input
