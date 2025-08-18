@@ -23,22 +23,18 @@ const ResumeList = () => {
 
   return (
     <div className='resume-download'>
-
-      {resumes.length === 0 ? (
+ {!resume ? (
         <p>No resume uploaded yet.</p>
       ) : (
-        <ul>
-          {resumes.map((r) => (
-            <li key={r._id}>
-
-             <div style={{margin:"10px"}}>
-               <button onClick={() => window.open(r.fileUrl, "_blank")} className="res-btn">
-                Resume
-              </button>
-             </div>
-            </li>
-          ))}
-        </ul>
+        <a
+          className="res-btn"
+          href={r.fileUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ textDecoration: "none" }} // removes underline
+        >
+          View Resume
+        </a>
       )}
     </div>
   );
