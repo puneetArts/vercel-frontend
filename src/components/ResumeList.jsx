@@ -31,9 +31,11 @@ const ResumeList = () => {
           {resumes.map((r) => (
             <li key={r._id}>
 
-              <button onClick={() => window.open(r.fileUrl, "_blank")} className="res-btn">
+             <div style={{margin:"10px"}}>
+               <button onClick={() => window.open(r.fileUrl, "_blank")} className="res-btn">
                 Resume
               </button>
+             </div>
             </li>
           ))}
         </ul>
