@@ -491,7 +491,7 @@ const ProfileEdit = () => {
         <button onClick={handleLogout} className="btn-logout">Logout</button>
       </div>
       <div>
-        Resume Section
+        <h2>Resume Section</h2>
       </div>
       <div className="profile-edit-container2">
         <div className="profile-edit-container">
