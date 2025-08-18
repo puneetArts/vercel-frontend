@@ -214,9 +214,9 @@ const ProfileView = () => {
           )}
         </div>
       </div>
-      <div>
+      {/* <div>
         <ResumeList resume={resume} />
-      </div>
+      </div> */}
       <div className='achieve-post'>
         <div className="post-view">
           <h2>Posts</h2>
