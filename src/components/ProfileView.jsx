@@ -136,6 +136,8 @@ const ProfileView = () => {
   // NEW: state for achievements & posts
   const [achievements, setAchievements] = useState([]);
   const [posts, setPosts] = useState([]);
+  const [resumes, setResumes] = useState([]);
+
 
   useEffect(() => {
     if (!user) return;
@@ -161,7 +163,15 @@ const ProfileView = () => {
       .then(res => setPosts(res.data))
       .catch(err => console.error('Posts fetch error:', err));
 
+       axios.get(`${import.meta.env.VITE_API_URL}/api/resumes/user/${id}`, {
+    headers: { Authorization: `Bearer ${user.token}` }
+  })
+    .then(res => setResumes(res.data))
+    .catch(err => console.error('Resumes fetch error:', err));
+
   }, [id, user]);
+  
+
 
   if (msg) return <p>{msg}</p>;
   if (!profile) return <p>Loading...</p>;
