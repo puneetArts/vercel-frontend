@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import axios from 'axios';
 import { AuthContext } from '../contexts/AuthContext';
-
+import './ResumeUpload.css'
 const ResumeUpload = ({ onUploaded }) => {
   const { user } = useContext(AuthContext);
   const [resumeFile, setResumeFile] = useState(null);
@@ -41,7 +41,8 @@ const ResumeUpload = ({ onUploaded }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} style={{ marginBottom: '1rem' }}>
+    <div className='resume-box'>
+      <form onSubmit={handleSubmit} style={{ marginBottom: '1rem' }}>
       <h4>Upload Resume</h4>
       {msg && <p>{msg}</p>}
 
@@ -51,8 +52,9 @@ const ResumeUpload = ({ onUploaded }) => {
         onChange={(e) => setResumeFile(e.target.files[0])}
       />
 
-      <button type="submit">Upload</button>
+      <button className='btn-r' type="submit">Upload</button>
     </form>
+    </div>
   );
 };
 
