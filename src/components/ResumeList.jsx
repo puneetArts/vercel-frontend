@@ -23,17 +23,17 @@ const ResumeList = () => {
 
   return (
     <div className='resume-download'>
-      
+
       {resumes.length === 0 ? (
         <p>No resume uploaded yet.</p>
       ) : (
         <ul>
           {resumes.map((r) => (
             <li key={r._id}>
-              
-              <a className='res-btn'  href={r.fileUrl} target="_blank" rel="noopener noreferrer">
-                {"Resume"}
-              </a>
+
+              <button onClick={() => window.open(r.fileUrl, "_blank")} className="res-btn">
+                Resume
+              </button>
             </li>
           ))}
         </ul>

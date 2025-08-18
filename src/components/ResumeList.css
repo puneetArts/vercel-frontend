@@ -10,6 +10,6 @@
   font-weight: 600;
   transition: background-color 0.2s ease;
   margin: 40px;
-  text-decoration: none; /* removes underline */
+  text-decoration: none !important; 
 
 }
