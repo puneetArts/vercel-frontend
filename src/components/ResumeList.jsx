@@ -9,12 +9,9 @@ const ResumeList = () => {
   useEffect(() => {
     const fetchResumes = async () => {
       try {
-        const res = await axios.get(
-          `${import.meta.env.VITE_API_URL}/api/resumes/college`,
-          {
-            headers: { Authorization: `Bearer ${user.token}` },
-          }
-        );
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/resumes/college`, {
+          headers: { Authorization: `Bearer ${user.token}` },
+        });
         setResumes(res.data);
       } catch (err) {
         console.error(err);
@@ -35,7 +32,7 @@ const ResumeList = () => {
             <li key={r._id}>
               <strong>{r.user?.name}</strong> -{" "}
               <a href={r.fileUrl} target="_blank" rel="noopener noreferrer">
-                View Resume
+                {r.fileName || "View Resume"}
               </a>
             </li>
           ))}
