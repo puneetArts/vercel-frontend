@@ -493,7 +493,7 @@ const ProfileEdit = () => {
 
         <button onClick={handleLogout} className="btn-logout">Logout</button>
       </div>
-      <div>
+      <div className='resume-container'>
         <ResumeUpload onAdded={r => console.log('Added', r)} />
       </div> 
       <div className="profile-edit-container2">
