@@ -22,7 +22,7 @@ const ResumeList = () => {
   }, [user.token]);
 
   return (
-    <div>
+    <div className='resume-download'>
       
       {resumes.length === 0 ? (
         <p>No resume uploaded yet.</p>

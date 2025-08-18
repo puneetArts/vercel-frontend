@@ -125,6 +125,6 @@
 .resume{
   display: flex;
   justify-content: center;
-  max-width: 90%;
-  align-items: start;
+  max-width: 200px;
+  align-items: center;
 }
