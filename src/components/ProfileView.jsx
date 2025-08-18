@@ -124,7 +124,6 @@ import AchievementsList from './AchievementsList';
 import PostsList from './PostsList';
 import { LiaCertificateSolid } from "react-icons/lia";
 import ResumeList from './ResumeList';
-// import ResumeList from './ResumeList';
 
 const ProfileView = () => {
   const { id } = useParams();
