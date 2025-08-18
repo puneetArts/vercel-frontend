@@ -341,6 +341,7 @@ import AchievementForm from './AchievementForm';
 import PostForm from './PostForm';
 import AchievementsList from './AchievementsList';
 import PostsList from './PostsList';
+import ResumeUpload from './ResumeUpload';
 // import ResumeList from './ResumeList';
 // import ResumeUpload from './ResumeUpload';
 
@@ -493,7 +494,7 @@ const ProfileEdit = () => {
         <button onClick={handleLogout} className="btn-logout">Logout</button>
       </div>
       <div>
-        Resume upload section
+        <ResumeUpload onAdded={r => console.log('Added', r)} />
       </div> 
       <div className="profile-edit-container2">
         <div className="profile-edit-container">

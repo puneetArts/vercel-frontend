@@ -123,6 +123,7 @@ import Header from './Header';
 import AchievementsList from './AchievementsList';
 import PostsList from './PostsList';
 import { LiaCertificateSolid } from "react-icons/lia";
+import ResumeList from './ResumeList';
 // import ResumeList from './ResumeList';
 
 const ProfileView = () => {
@@ -214,9 +215,9 @@ const ProfileView = () => {
           )}
         </div>
       </div>
-      {/* <div>
-        <ResumeList resume={resume} />
-      </div> */}
+      <div>
+        <ResumeList resume={resumes} />
+      </div>
       <div className='achieve-post'>
         <div className="post-view">
           <h2>Posts</h2>
