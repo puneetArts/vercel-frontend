@@ -341,6 +341,8 @@ import AchievementForm from './AchievementForm';
 import PostForm from './PostForm';
 import AchievementsList from './AchievementsList';
 import PostsList from './PostsList';
+import ResumeList from './ResumeList';
+import ResumeUpload from './ResumeUpload';
 
 const ProfileEdit = () => {
   const { user, login, logout } = useContext(AuthContext);
@@ -491,7 +493,7 @@ const ProfileEdit = () => {
         <button onClick={handleLogout} className="btn-logout">Logout</button>
       </div>
       <div>
-        <h2>Resume Section</h2>
+        <ResumeUpload onAdded={r => console.log('Added', r)} />
       </div>
       <div className="profile-edit-container2">
         <div className="profile-edit-container">
