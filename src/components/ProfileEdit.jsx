@@ -341,8 +341,8 @@ import AchievementForm from './AchievementForm';
 import PostForm from './PostForm';
 import AchievementsList from './AchievementsList';
 import PostsList from './PostsList';
-import ResumeList from './ResumeList';
-import ResumeUpload from './ResumeUpload';
+// import ResumeList from './ResumeList';
+// import ResumeUpload from './ResumeUpload';
 
 const ProfileEdit = () => {
   const { user, login, logout } = useContext(AuthContext);
