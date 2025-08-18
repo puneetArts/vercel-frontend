@@ -23,7 +23,7 @@ const ResumeList = () => {
 
   return (
     <div className='resume-download'>
- {!resume ? (
+ {!resumes ? (
         <p>No resume uploaded yet.</p>
       ) : (
         <a
