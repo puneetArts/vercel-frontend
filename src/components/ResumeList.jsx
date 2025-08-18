@@ -23,9 +23,9 @@ const ResumeList = () => {
 
   return (
     <div>
-      <h4>College Resumes</h4>
+      <h4>Resume</h4>
       {resumes.length === 0 ? (
-        <p>No resumes uploaded yet.</p>
+        <p>No resume uploaded yet.</p>
       ) : (
         <ul>
           {resumes.map((r) => (
