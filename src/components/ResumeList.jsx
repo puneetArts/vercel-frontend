@@ -30,9 +30,9 @@ const ResumeList = () => {
         <ul>
           {resumes.map((r) => (
             <li key={r._id}>
-              <strong>{r.user?.name}</strong> -{" "}
-              <a href={r.fileUrl} target="_blank" rel="noopener noreferrer">
-                {r.fileName || "View Resume"}
+              
+              <a style={{ border: "1px solid white", borderRadius: "0.9rem" }}  href={r.fileUrl} target="_blank" rel="noopener noreferrer">
+                {"Resume"}
               </a>
             </li>
           ))}
