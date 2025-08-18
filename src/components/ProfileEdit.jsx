@@ -490,6 +490,9 @@ const ProfileEdit = () => {
 
         <button onClick={handleLogout} className="btn-logout">Logout</button>
       </div>
+      <div>
+        Resume Section
+      </div>
       <div className="profile-edit-container2">
         <div className="profile-edit-container">
           <AchievementForm onAdded={a => console.log('Added', a)} />
