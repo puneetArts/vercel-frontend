@@ -172,7 +172,7 @@ const ProfileView = () => {
 
 
   if (msg) return <p>{msg}</p>;
-  if (!profile) return <p>Loading...</p>;
+  if (!profile) return <div style={{display: "flex", marginTop:"350px", alignItems:"center", justifyContent:"center"}}><p>Loading...</p></div>;
 
   return (
     <div>

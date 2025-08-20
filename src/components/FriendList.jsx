@@ -120,7 +120,7 @@ const FriendList = () => {
     fetchFriends();
   }, [user]);
 
-  if (loading) return <p>Loading friends...</p>;
+  if (loading) return <div style={{display: "flex", marginTop:"350px", alignItems:"center", justifyContent:"center"}}><p >Loading friends...</p></div>;
   if (msg) return <p style={{ color: 'red' }}>{msg}</p>;
 
   return (
