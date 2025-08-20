@@ -26,10 +26,10 @@ const Nav = () => {
         <CgAddR />
       </a>
 
-      <a href='#newsletter' onClick={() => setActiveNav('#newsletter')} className={activeNav === '#newsletter' ? 'active' : ''}><HiOutlineDocumentText /></a>
+      <a href='#newsletter' ><HiOutlineDocumentText /></a>
 
-      <a href='#services' onClick={() => setActiveNav('#services')} className={activeNav === '#services' ? 'active' : ''} ><RiServiceLine /></a>
-      <a href='#chats' onClick={() => setActiveNav('#chats')} className={activeNav === '#chats' ? 'active' : ''}><RiMessage3Line /></a>
+      <a href='#services'  ><RiServiceLine /></a>
+      <a href='#chats' ><RiMessage3Line /></a>
 
     </nav>
   )
