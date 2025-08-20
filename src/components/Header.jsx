@@ -84,7 +84,7 @@ const Header = () => {
 
         {/* Left Logo/Brand */}
         <div className="header-logo">
-          <Link to="/dashboard">LynxHub</Link>
+          <Link to="/dashboard">LynxApp</Link>
         </div>
 
         {/* Center Navigation Links */}

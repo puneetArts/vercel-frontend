@@ -291,6 +291,7 @@ import Header from './Header';
 import './Dashboard.css';
 import AchievementsList from './AchievementsList';
 import PostsList from './PostsList';
+import Nav from './Nav';
 
 const Dashboard = () => {
   const { user, logout } = useContext(AuthContext);
@@ -421,7 +422,7 @@ const Dashboard = () => {
   };
 
   return (
-    <div>
+    <div className='main-dash'>
       <Header />
       <h3 style={{ color: 'white', margin: "10px 180px" }}>
         Welcome to,{" "}
@@ -443,7 +444,7 @@ const Dashboard = () => {
       >
         {/* My Profile Section */}
         <div className='my-profile-section'>
-          <div>
+          <div className='edit-prof'>
             <img
               className='profile-dp'
               src={user.profilePic || '/default-avatar.jpg'}
@@ -561,6 +562,7 @@ const Dashboard = () => {
         </div>
 
       </div>
+      <Nav/>
     </div>
   );
 };
