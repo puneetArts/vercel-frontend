@@ -87,7 +87,7 @@ const Login = () => {
         src={illustration}
         alt='illustration'
       />
-      <h1>Connect. Collaborate. <span>Grow</span></h1>
+      <h1>Connect. Collaborate. <span>Grow.</span></h1>
       </div>
       <div className="login-container">
         <h2 style={{ color: "black" }}>Login</h2>

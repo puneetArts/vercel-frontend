@@ -251,7 +251,7 @@ const Signup = () => {
         src={illustration}
         alt='illustration'
       />
-      <h1>Connect. Collaborate. <span>Grow</span></h1>
+      <h1>Connect. Collaborate. <span>Grow.</span></h1>
       </div>
       <div className="signup-container">
         <h2>Signup</h2>

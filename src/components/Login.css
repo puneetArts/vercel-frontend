@@ -105,11 +105,12 @@ body {
   gap: 20px;
 }
 .ill-tag h1{
-  color: var(--color-primary);
-  font-weight:bolder;
+  color: #cfcbcb;
+  font-size:40px;
+  font-weight:bold;
 }
 .ill-tag h1 span{
-  color: #ffffff;
+  color: var(--color-primary);
   font-weight:bolder;
   font-size:80px;
 }

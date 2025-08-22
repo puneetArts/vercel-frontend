@@ -104,7 +104,7 @@ body {
   gap: 20px;
 }
 .ill-tag h1{
-  color: var(--color-primary);
+  color: #dbdbdb;
   font-weight:bolder;
 }
 
