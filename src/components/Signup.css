@@ -95,6 +95,18 @@ body {
   text-decoration: underline;
   color: #F79B72;
 }
+.ill-tag {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  margin: 0 150px;
+  gap: 20px;
+}
+.ill-tag h1{
+  color: var(--color-primary);
+  font-weight:bolder;
+}
 
 /* Responsive */
 @media (max-width: 768px) {

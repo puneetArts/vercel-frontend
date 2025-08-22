@@ -245,12 +245,14 @@ const Signup = () => {
 
   return (
     <div className='signup-page'>
-      <img
-        style={{ margin: "150px", maxHeight: "450px" }}
+      <div className='ill-tag'>
+        <img
+        style={{  maxHeight: "450px" }}
         src={illustration}
         alt='illustration'
       />
-
+      <h1>Connect. Collaborate. <span>Grow</span></h1>
+      </div>
       <div className="signup-container">
         <h2>Signup</h2>
         <form onSubmit={handleSubmit}>

@@ -18,7 +18,7 @@ body {
 .login-page img {
   max-width: 400px;
   height: auto;
-  margin-left: 40px;
+  /* margin-left: 40px; */
 }
 
 .login-container {
@@ -34,7 +34,8 @@ body {
 .login-container h2 {
   font-size: 28px;
   margin-bottom: 20px;
-  color: #0a66c2; /* LinkedIn blue */
+  color: #0a66c2;
+  /* LinkedIn blue */
   text-align: center;
 }
 
@@ -57,9 +58,9 @@ body {
   outline: none;
   box-shadow: 0 0 0 2px rgba(10, 102, 194, 0.2);
 }
-.switch{
 
-}
+.switch {}
+
 .login-container button {
   background-color: #0a66c2;
   color: #fff;
@@ -93,6 +94,24 @@ body {
 .login-container a:hover {
   text-decoration: underline;
   color: #F79B72;
+}
+
+.ill-tag {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  margin: 0 150px;
+  gap: 20px;
+}
+.ill-tag h1{
+  color: var(--color-primary);
+  font-weight:bolder;
+}
+.ill-tag h1 span{
+  color: #ffffff;
+  font-weight:bolder;
+  font-size:80px;
 }
 
 /* Responsive */
