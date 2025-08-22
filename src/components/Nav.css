@@ -1,6 +1,6 @@
 .nav{
   /* background: #2b4a5d; */
-  background: rgba(28, 109, 129, 0.3);
+  background: rgba(40, 54, 81, 0.55);
   width: max-content;
   display: block;
   padding: 0.7rem 1.7rem;
@@ -23,6 +23,7 @@
   border-radius: 50%;
   display: flex;
   color: var(--color-light);
+  font-size: 20px;
 }
 .nav a:hover{
   background: #F79B72;
@@ -33,4 +34,34 @@
   background: var(--color-primary);
   color: var(--color-bg);
 
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: max-content;
+  background-color: #ffffff;
+  color: #2b4a5d;
+  text-align: center;
+  padding: 4px 8px;
+  border-radius: 6px;
+  position: absolute;
+  top: 50%; /* push tooltip above the icon */
+  left: 190%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 12px;
+  white-space: nowrap;
+  transition-delay: 0s;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 1s;
 }

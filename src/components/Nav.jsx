@@ -8,6 +8,7 @@ import { RiServiceLine } from "react-icons/ri";
 import { CgAddR } from "react-icons/cg";
 import { IoNewspaperOutline } from "react-icons/io5";
 import { HiOutlineDocumentText } from "react-icons/hi2";
+import { MdOutlineGroups } from "react-icons/md";
 
 
 const Nav = () => {
@@ -15,21 +16,27 @@ const Nav = () => {
   const [activeNav, setActiveNav] = useState('#')
   return (
     <nav className='nav'>
-      <a href='#' ><LiaAngleDoubleUpSolid /></a>
+      <a href='#' className={`tooltip`}><LiaAngleDoubleUpSolid />
+      <span className="tooltip-text">Scroll Up</span></a>
 
       {/* <a href='#' onClick={() => setActiveNav('#')} className={activeNav === '#' ? 'active' : ''}><IoChevronUpOutline /></a> */}
 
 
       {/* <a href='#about' onClick={() => setActiveNav('#about')} className={activeNav === '#about' ? 'active' : ''}><HiOutlineUser /></a> */}
 
-      <a href="/edit-profile" onClick={() => setActiveNav('#edit-profile')} className={activeNav === '#edit-profile' ? 'active' : ''}>
+      <a href="/edit-profile" onClick={() => setActiveNav('#edit-profile')}   className={`tooltip ${activeNav === '#edit-profile' ? 'active' : ''}`}
+ >
         <CgAddR />
+        <span className="tooltip-text">Add Post</span>
       </a>
 
-      <a href='#newsletter' ><HiOutlineDocumentText /></a>
+      <a href='#newsletter' className={`tooltip`}><HiOutlineDocumentText />
+      <span className="tooltip-text">Newsletter</span></a>
 
-      <a href='#services'  ><RiServiceLine /></a>
-      <a href='#chats' ><RiMessage3Line /></a>
+      <a href='#clubs' className={`tooltip`}><MdOutlineGroups /><span className="tooltip-text">Clubs</span></a>
+
+      <a href='#chats' className={`tooltip`}><RiMessage3Line />
+      <span className="tooltip-text">Chats</span></a>
 
     </nav>
   )
