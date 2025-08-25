@@ -84,7 +84,7 @@ const Header = () => {
 
         {/* Left Logo/Brand */}
         <div className="header-logo">
-          <Link to="/dashboard">LynxApp</Link>
+          <Link to="/dashboard"><p>Lynx<span>App</span></p></Link>
         </div>
 
         {/* Center Navigation Links */}
@@ -110,7 +110,7 @@ const Header = () => {
                   height: "32px",
                   borderRadius: "50%",
                   objectFit: "cover",
-                  border: "2px solid #F79B72"
+                  border: "2px solid var(--color-primary)"
                 }}
                 onError={(e) => {
                   e.target.onerror = null;
@@ -128,7 +128,7 @@ const Header = () => {
             <small style={{ color: "#a4a0a0" }}>{user.email}</small>
           </span>
           <button
-            className="btn btn-logout"
+            className="btn-logout2"
             onClick={() => {
               logout();
               navigate('/login');

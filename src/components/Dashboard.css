@@ -1,14 +1,10 @@
 .main-dash {
   line-height: 1.7;
-  background-image: url(../assets/images/bg-texture.jpg);
-
-  background-size: cover;
-  background-repeat: repeat;
-  /* Tiles in both directions */
-  background-size: auto;
-  /* Keep original size of image */
+   background-image: url(../assets/images/bg-dash.jpg);
+  background-repeat: repeat;   /* ✅ tile in both x and y directions */
+  background-size: 390px 390px;      
   background-position: top left;
-  /* Start tiling from top left */
+
   min-height: 100vh;
 }
 
@@ -22,7 +18,7 @@
 .my-profile-section {
   display: flex;
   flex-direction: column;
-  background: #2b4a5d;
+  background: var(--color-bg2);
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1.5rem;
@@ -52,7 +48,7 @@ transition: all 0.3s ease;
   align-items: start;
   margin-bottom: 1.5rem;
   gap: 1rem;
-  background: #2b4a5d;
+  background: var(--color-bg2);
   width: 350px;
   padding: 1.5rem;
   border-radius: 0.4rem;
@@ -60,7 +56,7 @@ transition: all 0.3s ease;
 }
 
 .peer-section h2 {
-  color: #F79B72;
+  color: var(--color-primary);
 }
 
 .btn-profile {
@@ -190,7 +186,7 @@ transition: all 0.3s ease;
   width: 600px;
   /* prevent overflow */
   height: 100%;
-  background: #2b4a5d;
+  background: var(--color-bg2);
   border-radius: 0.3rem;
   padding: 3rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
@@ -202,7 +198,7 @@ transition: all 0.3s ease;
   flex: 1.1;
   /* sidebar is smaller */
   min-width: 0;
-  background: #2b4a5d;
+  background: var(--color-bg2);
   border-radius: 8px;
   padding: 1rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);

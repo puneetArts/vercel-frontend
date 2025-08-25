@@ -1,7 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,500&display=swap');
 
 /* ProfileView.css */
+.prof-view-main{
+    line-height: 1.7;
+   background-image: url(../assets/images/bg-dash.jpg);
+  background-repeat: repeat;   /* ✅ tile in both x and y directions */
+  background-size: 390px 390px;      
+  background-position: top left;
 
+  min-height: 100vh;
+}
 .profile-view {
   background: #ffffff;
   padding: 2rem;
@@ -14,7 +22,7 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .achievment-view {
-  background: #2b4a5d;
+  background-color: var(--color-bg2);
   padding: 2rem;
   
   color: #1b263b;
@@ -32,7 +40,7 @@
   
 }
 .post-view {
-  background: #2b4a5d;
+  background-color: var(--color-bg2);
   color: #1b263b;
   padding: 2rem;
   border-radius: 0.3rem;

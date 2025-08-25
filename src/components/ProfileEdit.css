@@ -1,4 +1,13 @@
 /* ProfileEdit.css */
+.prof-edit-main{
+      line-height: 1.7;
+   background-image: url(../assets/images/bg-dash.jpg);
+  background-repeat: repeat;   /* ✅ tile in both x and y directions */
+  background-size: 390px 390px;      
+  background-position: top left;
+
+  min-height: 100vh;
+}
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f3f2ef;
@@ -19,7 +28,7 @@ body {
   display: flex;
   flex-direction: row;
   gap: 1.5rem;
-  background-color: #2b4a5d;
+  background-color: var(--color-bg2);
   max-width: 90%;
   color: #1b263b;
   margin: 50px auto;
@@ -103,8 +112,9 @@ body {
 }
 
 .btn-logout {
-  background-color: #5e6163;
+  background-color: #5e6163 !important;
   width: 150px;
+  height: 45px;
   color: #fff;
   padding: 12px 14px;
   border: none;
@@ -117,7 +127,7 @@ body {
 }
 
 .btn-logout:hover {
-  background-color: #a6242d;
+  background-color: #a6242d ;
 }
 
 /* Responsive */

@@ -3,13 +3,13 @@
   
 }
 .achievement-list h2 {
-  color: #F79B72;
+  color: var(--color-primary);
   font-weight: 700;
 
 }
 
 .achievement-list small {
-  color: #F79B72;
+  color: var(--color-primary);
 }
 
 .achievements {

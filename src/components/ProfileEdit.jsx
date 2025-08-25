@@ -440,7 +440,7 @@ const ProfileEdit = () => {
   };
 
   return (
-    <div>
+    <div className='prof-edit-main'>
       <Header />
       <div className="profile-edit-container">
         <h2>Edit Profile</h2>

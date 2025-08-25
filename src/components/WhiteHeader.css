@@ -1,14 +1,11 @@
-/* src/components/Header.css */
-
-/* Full width sticky header */
-.app-header {
+.white-header {
   position: sticky;
   top: 0;
   width: 100%;
-  background-color: var(--color-bg-head);
-  color: var(--color-white);
+  background: linear-gradient(to right, #210d48 , #452a66, #554865); /* light gradient */
+  color: black; /* make sure text is visible */
   z-index: 1000;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* Flex container */
@@ -22,6 +19,19 @@
 }
 
 /* Brand / Logo */
+.header-logo{
+  display: flex;
+  gap: 0.3rem;
+  align-items:center ;
+  width: 120px;
+  
+}
+.header-logo .club{
+  font-size: 45px;
+  font-weight: 100;
+font-family: "Segoe UI", "Tahoma", sans-serif;
+color: #674295;
+}
 .header-logo a {
   font-size: 1.4rem;
   font-weight: 700;
@@ -76,10 +86,11 @@
   font-weight: 500;
   font-size: 0.95rem;
   gap: 0.9rem;
+  color: #ffffff;
 }
 
 /* Logout button */
-.btn-logout2 {
+.btn-logout-club {
   width: max-content;
   display: block;
   color: var(--color-primary);
@@ -92,11 +103,11 @@
   font-weight: 600;
   font-size: 1rem;
   text-align: center;
-  margin-top: 0.8rem;
-  margin-bottom: 0.8rem;
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
 }
 
-.btn-logout2:hover {
+.btn-logout-club:hover {
   background: var(--color-white);
   color: var(--color-bg);
   border-color: transparent;
@@ -112,3 +123,8 @@
     gap: 0.5rem;
   }
 }
+
+
+/* .dark\:to-\[\#3c0084\]:is(.dark *) {
+    --tw-gradient-to: #3c0084 var(--tw-gradient-to-position);
+}    */

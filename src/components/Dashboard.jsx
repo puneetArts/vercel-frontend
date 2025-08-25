@@ -286,15 +286,17 @@
 import React, { useEffect, useState, useContext } from 'react';
 import axios from 'axios';
 import { AuthContext } from "../contexts/AuthContext";
-import { useNavigate, Link } from "react-router-dom";
-import Header from './Header';
+// import { useNavigate, Link } from "react-router-dom";
+import {  Link } from "react-router-dom";
+
 import './Dashboard.css';
 import AchievementsList from './AchievementsList';
 import PostsList from './PostsList';
 import Nav from './Nav';
+import Header from './Header';
 
 const Dashboard = () => {
-  const { user, logout } = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
   const [users, setUsers] = useState([]);
   const [msg, setMsg] = useState('');
   const [friendRequestsSent, setFriendRequestsSent] = useState([]);
@@ -304,9 +306,9 @@ const Dashboard = () => {
 
   // College-wide posts & achievements
   const [collegePosts, setCollegePosts] = useState([]);
-  const [collegeAchievements, setCollegeAchievements] = useState([]);
+  // const [collegeAchievements, setCollegeAchievements] = useState([]);
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   // Fetch all users from the same college except current user
   useEffect(() => {
@@ -373,7 +375,7 @@ const Dashboard = () => {
 
     const fetchCollegeFeed = async () => {
       try {
-        const [postsRes, achieRes] = await Promise.all([
+        const [postsRes] = await Promise.all([
           axios.get(`${import.meta.env.VITE_API_URL}/api/posts/college`, {
             headers: { Authorization: `Bearer ${user.token}` }
           }),
@@ -382,7 +384,7 @@ const Dashboard = () => {
           })
         ]);
         setCollegePosts(postsRes.data || []);
-        setCollegeAchievements(achieRes.data || []);
+        // setCollegeAchievements(achieRes.data || []);
       } catch (err) {
         console.error("Error loading college feed:", err);
       }
@@ -423,7 +425,7 @@ const Dashboard = () => {
 
   return (
     <div className='main-dash'>
-      <Header />
+      <Header/>
       <h3 style={{ color: 'white', margin: "10px 180px" }}>
         Welcome to,{" "}
         <small style={{ opacity: 0.7, color: '#F79B72', fontSize: '20px' }}>
@@ -470,7 +472,7 @@ const Dashboard = () => {
 
             <Link to="/friend-requests" style={{ textDecoration: "none" }}>
               <button className='btn-profile2'>
-                Friend Requests ({receivedRequestsCount})
+                Link Requests ({receivedRequestsCount})
               </button>
             </Link>
           </div>

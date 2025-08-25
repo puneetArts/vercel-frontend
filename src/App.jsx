@@ -63,6 +63,9 @@ import ProfileView from "./components/ProfileView";
 import ProfileEdit from "./components/ProfileEdit";
 import FriendRequests from "./components/FriendRequests";
 import FriendList from "./components/FriendList";
+import Clubs from './pages/Clubs';
+
+// import CreateClub from './pages/CreateClub';
 // import Header from './components/Header'; // Optional global header
 
 // Private Route wrapper
@@ -95,6 +98,12 @@ function App() {
           <Route path="/friends" element={<PrivateRoute><FriendList /></PrivateRoute>} />
           <Route path="/profile/:id" element={<PrivateRoute><ProfileView /></PrivateRoute>} />
           <Route path="/edit-profile" element={<PrivateRoute><ProfileEdit /></PrivateRoute>} />
+    
+          <Route path="/clubs" element={<PrivateRoute><Clubs /></PrivateRoute>} />
+
+{/*          
+          <Route path="/create-club" element={<PrivateRoute><CreateClub /></PrivateRoute>} />
+ */}
 
           {/* Default redirect */}
           <Route path="*" element={<Navigate to="/login" />} />

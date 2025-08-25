@@ -5,7 +5,7 @@
   height: 1200px;
   margin: 3rem auto;
   padding: 2rem;
-  background: #2b4a5d;
+  background: var(--color-bg2);
   border-radius: 0.3rem;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.08);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -19,7 +19,7 @@
 
 .friend-list-container h3 {
   font-size: 1.5rem;
-  color: #F79B72;
+  color: var(--color-primary);
   margin-bottom: 1rem;
 }
 

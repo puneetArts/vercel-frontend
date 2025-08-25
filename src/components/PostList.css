@@ -3,7 +3,7 @@
   align-items: center;
 }
 .post-list h2{
-  color:#F79B72;
+  color: var(--color-primary);
   font-weight: 700;
   
 }
@@ -11,7 +11,8 @@
   color:#F79B72;
 }
 .post-user{
-  color: #F79B72; text-decoration: none;
+  color: var(--color-primary);
+   text-decoration: none;
   font-weight: 500;
 }
 .post-user:hover{

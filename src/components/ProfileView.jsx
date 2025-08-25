@@ -175,7 +175,7 @@ const ProfileView = () => {
   if (!profile) return <div style={{display: "flex", marginTop:"350px", alignItems:"center", justifyContent:"center"}}><p>Loading...</p></div>;
 
   return (
-    <div>
+    <div className='prof-view-main'>
       <Header />
       <div className='profile-achieve'>
         <div

@@ -4,6 +4,7 @@ body {
   background-color: #1b263b;
   margin: 0;
   padding: 0;
+
 }
 
 .login-page {
@@ -13,7 +14,16 @@ body {
   gap: 0px;
   min-height: 100vh;
   padding: 20px;
+
+  
 }
+  /* line-height: 1.7;
+   background-image: url(../assets/images/bg-dash.jpg);
+  background-repeat: repeat;   /* ✅ tile in both x and y directions 
+  background-size: 390px 390px;      
+  background-position: top left;
+
+  min-height: 100vh; */
 
 .login-page img {
   max-width: 400px;

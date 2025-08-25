@@ -13,7 +13,7 @@
   flex-direction: column;
   gap:2.3rem;
   border-radius: 3rem;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(3.8px);
 
 }
 
@@ -28,6 +28,10 @@
 .nav a:hover{
   background: #F79B72;
   color: black ;
+}
+.clubs-link:hover{
+  background: linear-gradient(to right, #5529ac , #7248a6, #8569a5) !important; 
+  color: rgb(255, 255, 255) !important;
 }
 
 .nav a.active{
@@ -48,10 +52,10 @@
   color: #2b4a5d;
   text-align: center;
   padding: 4px 8px;
-  border-radius: 6px;
+  border-radius: 4px;
   position: absolute;
   top: 50%; /* push tooltip above the icon */
-  left: 190%;
+  left: 195%;
   transform: translateX(-50%);
   opacity: 0;
   transition: opacity 0.3s;

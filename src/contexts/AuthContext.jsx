@@ -66,6 +66,7 @@
 import React, { createContext, useState, useEffect } from "react";
 import axios from "axios";
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
@@ -109,6 +110,7 @@ export const AuthProvider = ({ children }) => {
       const userData = { ...res.data, token };
       setUser(userData);
       localStorage.setItem("user", JSON.stringify(res.data));
+    // eslint-disable-next-line no-unused-vars
     } catch (err) {
       logout();
     }
