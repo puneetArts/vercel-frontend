@@ -1,6 +1,6 @@
 .nav{
   /* background: #2b4a5d; */
-  background: rgba(40, 54, 81, 0.55);
+  background: rgba(59, 63, 72, 0.55);
   width: max-content;
   display: block;
   padding: 0.7rem 1.7rem;
@@ -13,7 +13,7 @@
   flex-direction: column;
   gap:2.3rem;
   border-radius: 3rem;
-  backdrop-filter: blur(3.8px);
+  backdrop-filter: blur(2.8px);
 
 }
 
