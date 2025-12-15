@@ -110,6 +110,7 @@ const FriendList = () => {
           headers: { Authorization: `Bearer ${user.token}` }
         });
         setFriends(res.data);
+      // eslint-disable-next-line no-unused-vars
       } catch (err) {
         setMsg("Error loading friends");
       } finally {

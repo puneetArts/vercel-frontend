@@ -6,7 +6,7 @@ const AchievementForm = ({ onAdded }) => {
   const { user } = useContext(AuthContext);
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
-  const [year, setYear] = useState('');
+  const [ setYear] = useState('');
   const [date, setDate] = useState("");
   const [certificateFile, setCertificateFile] = useState(null);
   const [msg, setMsg] = useState('');

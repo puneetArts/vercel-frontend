@@ -55,15 +55,23 @@
 
 import React, { useContext } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+
 import Signup from "./components/Signup";
 import Login from "./components/Login";
 import Dashboard from "./components/Dashboard";
+
 import { AuthProvider, AuthContext } from "./contexts/AuthContext";
+
 import ProfileView from "./components/ProfileView";
 import ProfileEdit from "./components/ProfileEdit";
 import FriendRequests from "./components/FriendRequests";
 import FriendList from "./components/FriendList";
+
 import Clubs from './pages/Clubs';
+
+import VerifyEmail from "./pages/VerifyEmail";
+import ForgotPassword from "./pages/ForgotPassword";
+import ResetPassword from "./pages/ResetPassword";
 
 // import CreateClub from './pages/CreateClub';
 // import Header from './components/Header'; // Optional global header
@@ -91,6 +99,11 @@ function App() {
           {/* Public routes */}
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
+
+          {/* 🔐 EMAIL / OTP ROUTES (PUBLIC) */}
+          <Route path="/verify-email" element={<VerifyEmail />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/reset-password" element={<ResetPassword />} />
 
           {/* Protected routes */}
           <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} />
