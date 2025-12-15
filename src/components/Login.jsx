@@ -44,16 +44,23 @@ const Login = () => {
         />
         <h1>Connect. Collaborate. <span>Grow.</span></h1>
       </div>
+
       <div className="login-container">
         <h2 style={{ color: "black" }}>Login</h2>
-        <form onSubmit={handleSubmit}>
+
+        <form onSubmit={handleSubmit} autoComplete="off">
+
+          {/* Autofill trap */}
+          <input type="text" name="fake-username" style={{ display: "none" }} />
+          <input type="password" name="fake-password" style={{ display: "none" }} />
+
           <input
             name="email"
             placeholder="Email"
             value={form.email}
             onChange={handleChange}
             required
-            autoComplete="off"
+            autoComplete="username"
           />
 
           <div style={{ position: "relative" }}>
@@ -64,7 +71,7 @@ const Login = () => {
               value={form.password}
               onChange={handleChange}
               required
-              autoComplete="off"
+              autoComplete="current-password"
             />
             <span
               style={{
@@ -85,12 +92,15 @@ const Login = () => {
           <button type="submit">Login</button>
         </form>
 
+        {msg && <p style={{ color: "red" }}>{msg}</p>}
+
         <a href="/forgot-password" style={{ fontSize: "0.9rem" }}>
           Forgot password?
         </a>
 
-        {msg && <p style={{ color: "red" }}>{msg}</p>}
-        <a className='switch' href="/signup">Don't have an account?</a>
+        <a className='switch' href="/signup">
+          Don't have an account?
+        </a>
       </div>
     </div>
   );
