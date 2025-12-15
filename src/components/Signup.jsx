@@ -80,6 +80,7 @@ const Signup = () => {
             value={form.email}
             onChange={handleChange}
             required
+            autoComplete="off"
           />
 
           <div style={{ position: "relative" }}>
@@ -90,6 +91,7 @@ const Signup = () => {
               value={form.password}
               onChange={handleChange}
               required
+              autoComplete="off"
             />
             <span
               style={{

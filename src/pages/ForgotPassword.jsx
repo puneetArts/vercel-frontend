@@ -31,6 +31,7 @@ const ForgotPassword = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
+            autoComplete="off"
           />
           <button type="submit">Send OTP</button>
         </form>

@@ -36,6 +36,7 @@ const ResetPassword = () => {
             value={otp}
             onChange={(e) => setOtp(e.target.value)}
             required
+            autoComplete="off"
           />
           <input
             type="password"
