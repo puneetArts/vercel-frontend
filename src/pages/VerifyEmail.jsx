@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { verifyEmailOTP } from "../services/otpService";
 import { useNavigate, useLocation } from "react-router-dom";
-import './otp.css';
+import './verify.css';
 
 const VerifyEmail = () => {
   const navigate = useNavigate();
