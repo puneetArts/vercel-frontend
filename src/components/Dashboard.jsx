@@ -480,7 +480,7 @@ const Dashboard = () => {
           {/* Peer Section */}
           <div className='peer-section'>
             <h2>Your Peers</h2>
-            {msg && <p style={{ color: '#65cd61' }}>{msg}</p>}
+            {/* {msg && <p style={{ color: '#65cd61' }}>{msg}</p>} */}
             {loading ? (
               <p>Loading...</p>
             ) : (
