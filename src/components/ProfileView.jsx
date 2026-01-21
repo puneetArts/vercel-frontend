@@ -93,7 +93,7 @@ const ProfileView = () => {
                 e.target.src = '/default-avatar.jpg';
               }}
             />
-            <div className='bio'><p>{profile.bio}</p></div>
+            <div className='bio'><p>{profile.bio || 'No bio yet.'}</p></div>
           </div>
 
           <p><b>Email:</b> {profile.email}</p>
