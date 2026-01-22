@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { resetPassword } from "../services/otpService";
 import { useLocation, useNavigate } from "react-router-dom";
-import './otp.css';
+import "./otp.css";
 
 const ResetPassword = () => {
   const location = useLocation();
@@ -26,12 +26,11 @@ const ResetPassword = () => {
   };
 
   return (
-    <div className="signup-page">
-      <div className="signup-container">
+    <div className="reset-page">
+      <div className="reset-container">
         <h2>Reset Password</h2>
 
         <form onSubmit={handleReset} autoComplete="off">
-
           {/* 🔒 Autofill trap */}
           <input type="text" name="fake-username" style={{ display: "none" }} />
           <input type="password" name="fake-password" style={{ display: "none" }} />
@@ -60,7 +59,7 @@ const ResetPassword = () => {
           <p
             style={{
               color: msg.includes("successful") ? "green" : "red",
-              textAlign: "center"
+              textAlign: "center",
             }}
           >
             {msg}

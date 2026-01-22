@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { verifyEmailOTP } from "../services/otpService";
 import { useNavigate, useLocation } from "react-router-dom";
-import './verify.css';
+import "./verify.css";
 
 const VerifyEmail = () => {
   const navigate = useNavigate();
@@ -25,10 +25,10 @@ const VerifyEmail = () => {
   };
 
   return (
-    <div className="signup-page">
-      <div className="signup-container">
+    <div className="verify-page">
+      <div className="verify-container">
         <h2>Verify Email</h2>
-        <p style={{ textAlign: 'center', marginBottom: '15px' }}>
+        <p style={{ textAlign: "center", marginBottom: "15px" }}>
           OTP sent to <b>{email}</b>
         </p>
 
@@ -43,7 +43,17 @@ const VerifyEmail = () => {
           <button type="submit">Verify</button>
         </form>
 
-        {msg && <p style={{ color: msg.includes("success") ? "green" : "red", textAlign: 'center' }}>{msg}</p>}
+        {msg && (
+          <p
+            style={{
+              color: msg.includes("success") ? "green" : "red",
+              textAlign: "center",
+            }}
+          >
+            {msg}
+          </p>
+        )}
+
         <a href="/login">Back to Login</a>
       </div>
     </div>

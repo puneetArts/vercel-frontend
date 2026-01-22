@@ -1,12 +1,10 @@
-/* otp.css */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #1b263b;
   margin: 0;
-  
 }
 
-.signup-page {
+.reset-page {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,37 +13,36 @@ body {
   padding-right: 20px;
 }
 
-.signup-page img {
+.reset-page img {
   max-width: 400px;
   height: auto;
-  /* margin-left: 40px; */
 }
 
-.signup-container {
+.reset-container {
   background-color: #f3f2ef;
   padding: 40px 50px;
   border-radius: 8px;
-  box-shadow: 0 4px 20px  #f3f2ef;
+  box-shadow: 0 4px 20px #f3f2ef;
   margin-left: 38rem !important;
   width: 350px;
   display: flex;
   flex-direction: column;
 }
 
-.signup-container h2 {
+.reset-container h2 {
   font-size: 28px;
   margin-bottom: 20px;
-  color: #0a66c2; /* LinkedIn blue */
+  color: #0a66c2;
   text-align: center;
 }
 
-.signup-container form {
+.reset-container form {
   display: flex;
   flex-direction: column;
 }
 
-.signup-container input,
-.signup-container select {
+.reset-container input,
+.reset-container select {
   margin-bottom: 15px;
   padding: 12px 14px;
   border: 1px solid #ccc;
@@ -54,14 +51,14 @@ body {
   transition: border-color 0.2s ease;
 }
 
-.signup-container input:focus,
-.signup-container select:focus {
+.reset-container input:focus,
+.reset-container select:focus {
   border-color: #0a66c2;
   outline: none;
   box-shadow: 0 0 0 2px rgba(10, 102, 194, 0.2);
 }
 
-.signup-container button {
+.reset-container button {
   background-color: #0a66c2;
   color: #fff;
   padding: 12px 14px;
@@ -73,17 +70,17 @@ body {
   transition: background-color 0.2s ease;
 }
 
-.signup-container button:hover {
+.reset-container button:hover {
   background-color: #004182;
 }
 
-.signup-container p {
+.reset-container p {
   margin: 10px 0;
   font-size: 14px;
   text-align: center;
 }
 
-.signup-container a {
+.reset-container a {
   color: #0a66c2;
   font-size: 14px;
   text-decoration: none;
@@ -91,10 +88,11 @@ body {
   text-align: center;
 }
 
-.signup-container a:hover {
+.reset-container a:hover {
   text-decoration: underline;
   color: #F79B72;
 }
+
 .ill-tag {
   display: flex;
   flex-direction: column;
@@ -103,19 +101,20 @@ body {
   margin: 0 150px;
   gap: 20px;
 }
-.ill-tag h1{
+
+.ill-tag h1 {
   color: #dbdbdb;
-  font-weight:bolder;
+  font-weight: bolder;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .signup-page {
+  .reset-page {
     flex-direction: column;
     text-align: center;
   }
 
-  .signup-page img {
+  .reset-page img {
     margin: 0;
     max-width: 250px;
   }
