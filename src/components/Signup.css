@@ -56,13 +56,13 @@ body {
 
 .signup-container input:focus,
 .signup-container select:focus {
-  border-color: #0a66c2;
+  border-color: #087880;
   outline: none;
   box-shadow: 0 0 0 2px rgba(10, 102, 194, 0.2);
 }
 
 .signup-container button {
-  background-color: #0a66c2;
+  background-color: #085c8a;
   color: #fff;
   padding: 12px 14px;
   border: none;
@@ -107,6 +107,7 @@ body {
   color: #dbdbdb;
   font-weight:bolder;
 }
+
 
 /* Responsive */
 @media (max-width: 768px) {

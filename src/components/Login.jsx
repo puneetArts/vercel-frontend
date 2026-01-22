@@ -5,6 +5,7 @@ import { AuthContext } from "../contexts/AuthContext";
 import illustration from '../assets/images/illustration.png';
 import './Login.css';
 import { IoEye, IoEyeOff } from "react-icons/io5";
+import PublicHeader from "../components/PublicHeader";
 
 const Login = () => {
   const [form, setForm] = useState({ email: '', password: '' });
@@ -35,7 +36,10 @@ const Login = () => {
   };
 
   return (
-    <div className='login-page'>
+    <div>
+      <PublicHeader />
+      <div className='login-page'>
+      
       <div className='ill-tag'>
         <img
           style={{ maxHeight: "450px" }}
@@ -102,6 +106,7 @@ const Login = () => {
           Don't have an account?
         </a>
       </div>
+    </div>
     </div>
   );
 };
