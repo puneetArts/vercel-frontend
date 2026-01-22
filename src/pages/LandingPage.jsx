@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import PublicHeader from "../components/PublicHeader";
 
-import illustration from "../assets/images/illustration.png";
+import illustration_people from "../assets/images/illustration-people.png";
 import illustration_post from "../assets/images/illustration-post.png";
 import illustration_achiv from "../assets/images/illustration-achiv.png";
 import illustration_connect from "../assets/images/illustration-connect.png";
@@ -76,7 +76,7 @@ const LandingPage = () => {
         </div>
 
         <div className="hero-right">
-          <img src={illustration} alt="hero" />
+          <img src={illustration_people} alt="hero" />
         </div>
       </section>
 

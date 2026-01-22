@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 55px 120px;
+  padding: 105px 120px;
   background: #1b263b;
   color: white;
 }
@@ -32,7 +32,7 @@
 }
 
 .hero-right img {
-  max-width: 420px;
+  max-width: 520px;
 }
 
 
