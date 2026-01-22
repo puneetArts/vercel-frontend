@@ -22,8 +22,7 @@ body {
   background-color: #f3f2ef;
   padding: 40px 50px;
   border-radius: 8px;
-  box-shadow: 0 4px 20px #f3f2ef;
-  margin-left: 38rem !important;
+  box-shadow: none;
   width: 350px;
   display: flex;
   flex-direction: column;

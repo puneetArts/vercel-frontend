@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { sendResetOTP } from "../services/otpService";
 import { useNavigate } from "react-router-dom";
-import './otp.css';
+import "./otp.css";
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");
@@ -21,8 +21,8 @@ const ForgotPassword = () => {
   };
 
   return (
-    <div className="signup-page">
-      <div className="signup-container">
+    <div className="reset-page">
+      <div className="reset-container">
         <h2>Forgot Password</h2>
 
         <form onSubmit={sendOTP}>
@@ -36,7 +36,7 @@ const ForgotPassword = () => {
           <button type="submit">Send OTP</button>
         </form>
 
-        {msg && <p style={{ color: 'red', textAlign: 'center' }}>{msg}</p>}
+        {msg && <p style={{ color: "red", textAlign: "center" }}>{msg}</p>}
         <a href="/login">Back to Login</a>
       </div>
     </div>
