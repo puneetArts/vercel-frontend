@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import PublicHeader from "../components/PublicHeader";
+
 import illustration from "../assets/images/illustration.png";
 import illustration_post from "../assets/images/illustration-post.png";
 import illustration_achiv from "../assets/images/illustration-achiv.png";
@@ -27,10 +28,33 @@ const features = [
 ];
 
 const LandingPage = () => {
+  const [showArrow, setShowArrow] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Hide arrow after user scrolls a little
+      if (window.scrollY > 80) {
+        setShowArrow(false);
+      } else {
+        setShowArrow(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToFeatures = () => {
+    document
+      .querySelector(".features-wrapper")
+      ?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <>
       <PublicHeader />
 
+      {/* HERO SECTION */}
       <section className="hero">
         <div className="hero-left">
           <h1>
@@ -56,6 +80,14 @@ const LandingPage = () => {
         </div>
       </section>
 
+      {/* SCROLL DOWN ARROW */}
+      {showArrow && (
+        <div className="scroll-down" onClick={scrollToFeatures}>
+          ↓
+        </div>
+      )}
+
+      {/* FEATURES */}
       <div className="features-wrapper">
         {features.map((f, i) => (
           <section
@@ -75,6 +107,7 @@ const LandingPage = () => {
         ))}
       </div>
 
+      {/* CTA */}
       <section className="cta">
         <h2>Ready to join your campus network?</h2>
         <div className="hero-actions">

@@ -21,7 +21,7 @@
 }
 
 .hero-left p {
-  margin: 20px 0;
+  margin: 10px 0;
   color: #cfd3d8;
 }
 
@@ -35,9 +35,10 @@
   max-width: 420px;
 }
 
+
 .feature {
   margin: 0;               
-  padding: 80px 120px;
+  padding: 70px 120px;
   display: flex;
   align-items: center;
   gap: 80px;
@@ -63,7 +64,7 @@
 }
 
 .divider {
-  width: 60px;
+  width: 50px;
   height: 4px;
   background: var(--color-primary);
   margin: 12px 0;
@@ -116,4 +117,34 @@
 
 .features-wrapper .feature:nth-child(even) .feature-text p {
   color: #cfd3d8;
+}
+/* Scroll Down Arrow */
+.scroll-down {
+  position: fixed;
+  bottom: 48px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 44px;
+  color: #F79B72;
+  cursor: pointer;
+  animation: floatDown 1.5s ease-in-out infinite;
+  z-index: 1000;
+  user-select: none;
+}
+
+.scroll-down:hover {
+  color: #ffffff;
+}
+
+/* Floating animation */
+@keyframes floatDown {
+  0% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, 12px);
+  }
+  100% {
+    transform: translate(-50%, 0);
+  }
 }
