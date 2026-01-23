@@ -118,6 +118,9 @@ const LandingPage = () => {
             Login
           </Link>
         </div>
+        <footer className="footer-cta">
+  © {new Date().getFullYear()} LynxApp. All rights reserved.
+</footer>
       </section>
     </>
   );
