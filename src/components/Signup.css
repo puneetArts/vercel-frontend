@@ -11,8 +11,9 @@ body {
   justify-content: center;
   align-items: center;
   gap: 0px;
-  min-height: 100vh;
+  height: 100%;
   padding-right: 190px;
+  padding-top: 20px;
 }
 
 .signup-page img {

@@ -12,10 +12,10 @@ body {
   justify-content: center;
   align-items: center;
   gap: 0px;
-  min-height: 100vh;
+  height: 100%;
   padding-right: 190px;
   margin: 0;
-
+  padding-top: 20px;
   
 }
   /* line-height: 1.7;
