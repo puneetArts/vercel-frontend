@@ -18,8 +18,8 @@
 .my-profile-section {
   display: flex;
   flex-direction: column;
-  background: var(--color-bg2);
-  justify-content: space-between;
+  background: none;
+  justify-content: flex-start;
   align-items: center;
   margin-bottom: 1.5rem;
   gap: 1.5rem;
@@ -28,18 +28,24 @@
   padding: 1.5rem;
   border-radius: 0.4rem;
   margin: 1rem;
-  height: 350px;
+  height: auto;
   
 }
-/* .edit-prof{
-transition: all 0.3s ease;
- backdrop-filter: blur(5px);
- background: #e6e3e2;
+
+.edit-prof {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-bg2);
+
+  align-items: center;      
+  justify-content: center; 
+
+  gap: .5rem;
+  width: 350px;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  margin: 0.5rem;
 }
-.edit-prof:hover {
-  background: transparent;
-  border: 0.1px solid rgb(119, 119, 119);
-} */
 
 .peer-section {
   display: flex;
@@ -54,6 +60,60 @@ transition: all 0.3s ease;
   border-radius: 0.4rem;
   margin: 0.5rem;
 }
+.null-section {
+  position: sticky;
+  top: 110px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  background: var(--color-bg2);
+  width: 350px;
+  padding: 0.8rem;
+  border-radius: 0.4rem;
+  margin: 0.5rem;
+  
+}
+.footer-section {
+  position: sticky;
+  top: 41rem; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  background: none;
+  width: 350px;
+  padding: 0.8rem;
+  border-radius: 0.4rem;
+  margin: 0.5rem;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 0px;
+  color: #aaa;
+  font-size: 14px;
+  
+}
+
+
+.club-link {
+  font-size: 20px;
+  font-weight: 100;
+font-family: "Segoe UI", "Tahoma", sans-serif;
+color: #ffffff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin: 10px;
+ 
+  padding: 0.5rem;
+}
+
+.club-link:hover {
+  color:#F79B72;
+  transform: translateZ(4px);
+}
+
 
 .peer-section h2 {
   color: var(--color-primary);
@@ -174,7 +234,7 @@ transition: all 0.3s ease;
   /* keeps layout centered like LinkedIn */
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  overflow: visible;
   /* prevents child overflow */
   background: transparent;
 }
@@ -190,7 +250,7 @@ transition: all 0.3s ease;
   border-radius: 0.3rem;
   padding: 3rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
-  overflow: auto;
+  overflow: visible;
 }
 
 /* Achievements column */
@@ -204,7 +264,7 @@ transition: all 0.3s ease;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
   height: fit-content;
   /* prevents stretching unnecessarily */
-  overflow: auto;
+  overflow: visible;
 }
 
 /* Optional: make it responsive for mobile */
