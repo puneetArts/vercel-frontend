@@ -1,44 +1,69 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { createClub, getRecommendations } from '../services/clubService';
 import './Clubs.css';
 import WhiteHeader from '../components/WhiteHeader';
-// import Header from '../components/Header';
+import { jwtDecode } from "jwt-decode";
 
 function Clubs() {
   const [interests, setInterests] = useState("");
   const [recommendations, setRecommendations] = useState([]);
   const [clubData, setClubData] = useState({ name: "", description: "", tags: "", college: "" });
+  const [userRole, setUserRole] = useState("student"); // default role
+
+  // ✅ Get role from JWT once when component mounts
+  useEffect(() => {
+  const token = localStorage.getItem("token");
+  if (token) {
+    try {
+      const decoded = jwtDecode(token); // 👈 correct
+      setUserRole(decoded.role || "student");
+    } catch (err) {
+      console.error("Invalid token");
+    }
+  }
+}, []);
+
 
   // Handle AI Recommendations
   const handleRecommend = async () => {
     if (!interests) return alert("Enter your interests!");
-    const res = await getRecommendations(interests.split(",").map(i => i.trim()));
-    setRecommendations(res.recommendations);
+    try {
+      const res = await getRecommendations(interests.split(",").map(i => i.trim()));
+      setRecommendations(res.recommendations || []);
+    } catch (err) {
+      console.error(err);
+      alert("Error fetching recommendations");
+    }
   };
 
-  // Handle Club Creation
+  // Handle Club Creation (ambassador only)
   const handleCreate = async () => {
     if (!clubData.name || !clubData.tags || !clubData.college) {
       return alert("Please fill all required fields!");
     }
 
-    const res = await createClub({
-      ...clubData,
-      tags: clubData.tags.split(",").map(i => i.trim()),
-    });
+    try {
+      const res = await createClub({
+        ...clubData,
+        tags: clubData.tags.split(",").map(i => i.trim()),
+      });
 
-    alert(`Club Created: ${res.name}`);
+      alert(`Club Created: ${res.name}`);
 
-    // ✅ Clear the input fields after creation
-    setClubData({ name: "", description: "", tags: "", college: "" });
+      // Clear input fields
+      setClubData({ name: "", description: "", tags: "", college: "" });
 
-    // Optional: refresh recommendations automatically
-    handleRecommend();
+      // Optional: refresh recommendations
+      handleRecommend();
+    } catch (err) {
+      console.error(err);
+      alert(err.message || "Error creating club");
+    }
   };
 
   return (
     <div>
-      <WhiteHeader/>
+      <WhiteHeader />
       <div className="clubs-container">
 
         {/* Find Clubs */}
@@ -53,22 +78,17 @@ function Clubs() {
             />
             <button onClick={handleRecommend}>Get Recommendations</button>
           </div>
-
-
-
-         
         </div>
+
+        {/* Club Recommendations */}
         <div className="card2">
-           <h3>Campus Clubs</h3>
-           <h4>Enter your interests to discover relevant clubs</h4>
+          <h3>Campus Clubs</h3>
+          <h4>Enter your interests to discover relevant clubs</h4>
           <ul className="recommendations-list">
             {recommendations.map((club) => (
               <li key={club._id} className="recommendation-card">
                 <h3 className="club-name">{club.name}</h3>
                 <p className="club-desc">{club.description}</p>
-                
-                {/* <p className="college-name"><strong>College:</strong> {club.college}</p>
-                 */}
                 <p className="score">Match {Math.round(club.score * 100)}%</p>
                 <button className='join-btn'>Join</button>
               </li>
@@ -76,10 +96,9 @@ function Clubs() {
           </ul>
         </div>
 
-
-
-        {/* Create Club */}
-        <div className="card3">
+        {/* Create Club (ambassador only) */}
+        {userRole === "ambassador" && (
+          <div className="card3">
           <h2>Create a Club</h2>
           <div className="input-group-col">
             <input
@@ -108,7 +127,10 @@ function Clubs() {
             />
           </div>
           <button className="create-btn" onClick={handleCreate}>Create Club</button>
-        </div>
+        </div> 
+         
+        )}
+
       </div>
     </div>
   );

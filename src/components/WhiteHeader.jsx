@@ -59,7 +59,7 @@ const WhiteHeader = () => {
             <div className="header-right">
               <span className="header-user">
                 <div>{user.name}</div>
-                <small style={{ color: "#a4a0a0" }}>{user.email}</small>
+                {/* <small style={{ color: "#a4a0a0" }}>{user.email}</small> */}
               </span>
               <button
                 className="btn btn-logout-club"
